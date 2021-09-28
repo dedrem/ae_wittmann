@@ -1,7 +1,6 @@
 from hello_world import *
 
-print_variable("Hello World")
-print_variable(123)
+print_variable("EIT11C UE 1")
 
 a = 5
 b = 10
