@@ -1,2 +1,3 @@
-# ae_wittmann
-EIT11C Python lessons
+# Übungseinheit 1
+
+Einfacher Einstieg in Python
