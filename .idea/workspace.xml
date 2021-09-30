@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21196fa1-379d-4ff0-b6b9-0ccde7d36592" name="Changes" comment="added standard overload">
+    <list default="true" id="21196fa1-379d-4ff0-b6b9-0ccde7d36592" name="Changes" comment="added list-exercises">
+      <change beforePath="$PROJECT_DIR$/aufgaben.py" beforeDir="false" afterPath="$PROJECT_DIR$/aufgaben.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_center.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_center.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632993715077</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added list-exercises">
+      <created>1633002420299</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1633002420299</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +130,7 @@
     <MESSAGE value="Added tasks 1 and 2, page 2" />
     <MESSAGE value="spelling" />
     <MESSAGE value="added standard overload" />
-    <option name="LAST_COMMIT_MESSAGE" value="added standard overload" />
+    <MESSAGE value="added list-exercises" />
+    <option name="LAST_COMMIT_MESSAGE" value="added list-exercises" />
   </component>
 </project>
