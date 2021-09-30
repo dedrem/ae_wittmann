@@ -11,3 +11,10 @@ def calculate_average(array_age):
     for x in array_age:
         sum += x
     return sum/len(array_age)
+
+
+def calculate_average_standard_overload(*args):
+    sum = 0
+    for x in args:
+        sum += x
+    return sum/len(args)

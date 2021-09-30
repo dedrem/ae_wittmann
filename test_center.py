@@ -2,10 +2,7 @@ from hello_world import *
 
 print_variable("EIT11C UE 1")
 
-a = 5
-b = 10
-c = 20
-d = 25
+a, b, c, d = 5, 10, 20, 25
 
 addition = a+b
 subtraction = d-c
@@ -19,3 +16,5 @@ print_calculation(d, a, "/", division)
 
 ages = [17,18,29,10,25,30]
 print(f"Das Durchschnittsalter der {len(ages)} Personen beträgt {calculate_average(ages)} Jahre.")
+print(f"Das Durchschnittsalter der Personen beträgt {calculate_average_standard_overload(13,15,16,45,64)} Jahre.")
+
