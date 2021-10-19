@@ -50,6 +50,7 @@ def print_continents(continents: list) -> None:
 def print_inhabited_continents(continents: list) -> None:
     continents.remove("Antarktis")
     print_continents(continents)
+    continents.append("Antarktis") # only for fixing list in test_center.py
     return
 
 
@@ -57,4 +58,13 @@ def print_only_continents(list_to_check: list, list_template: list) -> None:
     for item in list_to_check:
         if item in list_template:
             print(item)
+    return
+
+
+def print_number_of_continents(list_to_check: list, list_template: list) -> None:
+    number_of_continents = 0
+    for item in list_to_check:
+        if item in list_template:
+            number_of_continents += 1
+    print(f"Die Anzahl der Kontinente in der Liste ist: {number_of_continents}")
     return
