@@ -22,7 +22,7 @@ def check_drinking_age(age_to_check: int, country: str) -> None:
     return
 
 
-# prints given list, for is not recommended but whatever
+# prints given list. "for" is not recommended but whatever
 def print_list(list_to_print: list) -> None:
     for x in range(0,1):
         print(*list_to_print, sep="\n")
