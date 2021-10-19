@@ -16,7 +16,11 @@ print_list(company)
 
 # dog age
 print("\n\nHundealter ermitteln: ")
-print(f"Das Hundealter entspricht {calculate_dog_age()} Menschenjahren")
+age = calculate_dog_age()
+if age is None:
+    print("critical error")
+else:
+    print(f"Das Hundealter entspricht {age} Menschenjahren")
 
 
 # Übungsaufgabe Groß mit Kontinenten
