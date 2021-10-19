@@ -22,10 +22,7 @@ def get_name_from_provider(email):
 
 
 def join_elements_to_list(*args):
-    list = []
-    for x in args:
-        list.append(x)
-    return list
+    return [*args]
 
 
 def join_elements(args, char):
