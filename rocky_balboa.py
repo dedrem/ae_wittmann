@@ -3,6 +3,7 @@ from string_files import *
 
 game_ended: bool = False
 game_loss: bool = False
+program_exited: bool = False
 
 score_player: int = 0
 score_pc: int = 0
@@ -25,12 +26,22 @@ def get_player_guess() -> int:
     return 0
 
 
-# ends game and displays result
+# ends game and displays result, checks for additional game
 def end_game() -> None:
+    global program_exited, score_pc, score_player, game_loss, game_ended
+
     if game_loss:
         print(string_loss)
     else:
         print(string_win)
+
+    if input(string_prompt_continue).lower() != "y":
+        program_exited = True
+    else:
+        score_player = 0
+        score_pc = 0
+        game_loss = False
+        game_ended = False
     return
 
 
@@ -76,12 +87,13 @@ def print_scores() -> None:
 
 def main():
     print(string_welcome)
-    while not game_ended:
-        current_pc_guess = get_random_int(1, 3)
-        current_player_guess = get_player_guess()
-        update(current_pc_guess, current_player_guess)
-        print_scores()
-    end_game()
+    while not program_exited:
+        while not game_ended:
+            current_pc_guess = get_random_int(1, 3)
+            current_player_guess = get_player_guess()
+            update(current_pc_guess, current_player_guess)
+            print_scores()
+        end_game()
 
 
 if __name__ == "__main__":
