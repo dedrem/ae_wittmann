@@ -20,7 +20,7 @@ age = calculate_dog_age()
 if age is None:
     print("critical error")
 else:
-    print(f"Das Hundealter entspricht {age} Menschenjahren")
+    print(f"Das Hundealter entspricht einem {age} Jahren alten Menschen")
 
 
 # Übungsaufgabe Groß mit Kontinenten
@@ -38,3 +38,6 @@ print_only_continents(stuff, continents)
 
 print("\n\nAnzahl der Kontinente aus der Liste stuff:")
 print_number_of_continents(stuff, continents)
+
+test = ["HALLO", "TSCHÜSS", "KARTOFFEL", "BIRNE"]
+print(*test)
