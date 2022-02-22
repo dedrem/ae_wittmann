@@ -5,7 +5,7 @@ if __name__ == "__main__":
     print("UE_6")
 
     print("\nsum up cart")
-    item_prices = [2.04, 3.22, 5.66, 10]
+    item_prices = [2.04, 3.22, 5.66, 10, "wtwt"]
     standard_lib.print_f_string(cart_answer, item_prices, list_sum(item_prices))
 
     print("\ncreate a price list")
@@ -19,8 +19,9 @@ if __name__ == "__main__":
     print(add_shelf(shelf, "Relais"))
 
     print("\npalindoomer")
-    str_to_check = "Lagerregal"
-    standard_lib.print_f_string(palindrome_answer, str_to_check, palindrome(str_to_check))
+    str_to_check = "Lagerkdkregal"
+    standard_lib.print_f_string(palindrome_answer, str_to_check, "ein" if palindrome(str_to_check) else "kein")
+
 
 
 
