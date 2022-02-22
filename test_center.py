@@ -1,3 +1,4 @@
+import standard_lib
 from aufgaben import *
 
 if __name__ == "__main__":
@@ -16,6 +17,10 @@ if __name__ == "__main__":
     shelf = ["Transistor", "leer", "Leuchtdiode", "Fotodiode", "leer"]
     print(shelf)
     print(add_shelf(shelf, "Relais"))
+
+    print("\npalindoomer")
+    str_to_check = "Lagerregal"
+    standard_lib.print_f_string(palindrome_answer, str_to_check, palindrome(str_to_check))
 
 
 

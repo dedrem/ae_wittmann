@@ -28,6 +28,11 @@ def add_shelf(shelf: list, item: str) -> list:
     return shelf
 
 
+# check if a word is palindrome
+def palindrome(word_to_check: str) -> bool:
+    return word_to_check.lower() == word_to_check[::-1].lower()
+
+
 
 
 
