@@ -1,41 +1,61 @@
 from strings import *
 import standard_lib
+import math
 import locale
 
-locale.setlocale(locale.LC_ALL, 'de_DE')
+locale.setlocale(locale.LC_ALL, "de_DE")
 
 
-# sum over cart
-def list_sum(prices: list) -> float:
-    sum_cart = 0
-    for item in prices:
-        if isinstance(item, float) or isinstance(item, int):
-            sum_cart += item
-    return locale.currency(sum_cart)
+class ThreeDimensionalBody:
+    def surface(self) -> float:
+        pass
+
+    def volume(self) -> float:
+        pass
 
 
-# price table for article
-def create_price_list(article_name: str, price: float) -> list:
-    output = []
-    for x in range(1, 11):
-        output.append(standard_lib.create_f_string(price_table_line, x, article_name, locale.currency(x * price)))
-    return output
+class Cube(ThreeDimensionalBody):
+    def __init__(self, length_side):
+        self.length_side = length_side
+
+    def surface(self) -> float:
+        return self.length_side ** 2
+
+    def volume(self) -> float:
+        return self.length_side ** 3
 
 
-# put item in virtual shelf
-def add_shelf(shelf: list, item: str) -> list:
-    shelf[shelf.index("leer")] = item
-    return shelf
+class Sphere(ThreeDimensionalBody):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def surface(self) -> float:
+        return 4 * math.pi * self.radius**2
+
+    def volume(self) -> float:
+        return (3/4) * math.pi * self.radius**3
 
 
-# check if a word is palindrome
-def palindrome(word_to_check: str) -> bool:
-    return word_to_check.lower() == word_to_check[::-1].lower()
+class Account:
+    def __init__(self, credits, pin):
+        self.credits: float = credits
+        self.pin = pin
 
+    def pay_in(self, amount) -> None:
+        self.credits += amount
 
+    def withdraw(self, amount) -> None:
+        if not self.check_pin():
+            print(error_message_pin)
+        else:
+            if amount > self.credits:
+                standard_lib.print_f_string(error_message_money, locale.currency(self.credits))
+            else:
+                self.credits -= amount
 
-
-
+    def check_pin(self) -> bool:
+        user_input = standard_lib.user_input(pin_prompt, int)
+        return True if user_input == self.pin else False
 
 
 

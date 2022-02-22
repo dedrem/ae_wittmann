@@ -1,5 +1,6 @@
 # all strings
 
-cart_answer = "Der Warenkorb mit den Preisen {} macht in Summe {} aus."
-price_table_line = "{} x {}: {}"
-palindrome_answer = "{} ist {} Palindrom."
+error_message_money = "Abhebung nicht möglich, maximal können {} abgehoben werden!"
+pin_prompt = "Please enter pin "
+error_message_pin = "Your pin was false"
+
