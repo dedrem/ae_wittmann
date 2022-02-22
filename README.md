@@ -1,6 +1,6 @@
 maintainer: Maximilian Goldbrunner
 
-Übungseinheit 5
+Übungseinheit 7
 ---------------------------------------
 
-Funktionen,
+Klassen
