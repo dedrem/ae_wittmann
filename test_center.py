@@ -1,10 +1,21 @@
-import standard_lib
 from aufgaben import *
 
 if __name__ == "__main__":
-    #get_order_price()
-    #get_brutto_from_netto(20)
-    #calculate_moneeeeeys()
+    print("UE_6")
+
+    print("\nsum up cart")
+    item_prices = [2.04, 3.22, 5.66, 10]
+    standard_lib.print_f_string(cart_answer, item_prices, list_sum(item_prices))
+
+    print("\ncreate a price list")
+    article_name = "Leuchtdiode"
+    article_price = 69.21
+    print(create_price_list(article_name, article_price))
+
+    print("\nshelferhelver")
+    shelf = ["Transistor", "leer", "Leuchtdiode", "Fotodiode", "leer"]
+    print(shelf)
+    print(add_shelf(shelf, "Relais"))
 
 
 

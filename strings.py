@@ -1,3 +1,4 @@
-SOUND_30: int = 500
-SOUND_20: int = 1000
-SOUND_10: int = 2000
+# all strings
+
+cart_answer = "Der Warenkorb mit den Preisen {} macht in Summe {} aus."
+price_table_line = "{} x {}: {}"

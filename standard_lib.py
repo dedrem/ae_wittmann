@@ -17,11 +17,21 @@ def print_f_string(string_to_print: str, *args) -> None:
     substrings = string_to_print.split("{}")
     output = substrings.pop(0)
     i = 0
-    print(args[i])
     while len(substrings) > 0:
         output += str(args[i]) + substrings.pop(0)
         i += 1
     print(output)
+
+
+# create f string
+def create_f_string(string_to_print: str, *args) -> str:
+    substrings = string_to_print.split("{}")
+    output = substrings.pop(0)
+    i = 0
+    while len(substrings) > 0:
+        output += str(args[i]) + substrings.pop(0)
+        i += 1
+    return output
 
 
 # sum up a list
