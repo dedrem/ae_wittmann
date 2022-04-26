@@ -1,6 +1,6 @@
 maintainer: Maximilian Goldbrunner
 
-Übungseinheit 7
+Übungseinheit 8
 ---------------------------------------
 
-Klassen
+Übergreifende Übung mit Klassen
