@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from tkinter import N
 import turtle
 from winsound import Beep
 
@@ -67,4 +68,31 @@ def isPrime(number: int) -> bool:
 
     return True if prime else None
 
-print(*[number for number in range(1, 101) if isPrime(number)], end=" ")
+# print(*[number for number in range(1, 101) if isPrime(number)], end=" ")
+
+
+# sentence palindrom
+
+
+def check_palindrom_sentence(sentence: str) -> bool:
+    symbols = '".,!? '
+    
+    for symbol in symbols:
+        sentence = sentence.replace(symbol, '')
+    processed_sentence = sentence.lower()
+    return processed_sentence == processed_sentence[::-1]
+
+
+s = 'Mein ! isi "n"ieM!!'
+print(check_palindrom_sentence(s), s)
+
+def check_palindrom(sentence: str) -> bool:
+    symbols = '".,!?'
+
+    processed_sentence = sentence.lower()
+    translation_symbols = processed_sentence.maketrans(symbols, '     ')
+    processed_sentence = processed_sentence.translate(translation_symbols)
+    processed_sentence = processed_sentence.replace(' ', '')
+    return processed_sentence == processed_sentence[::-1]
+
+print(check_palindrom(s), s)
