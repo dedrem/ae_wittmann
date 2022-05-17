@@ -2,6 +2,7 @@ from dataclasses import dataclass
 import pandas 
 from datetime import datetime, time, timedelta
 
+
 # csv
 dataframe: pandas.DataFrame = pandas.read_csv('csv_data/flughafenkuerzel.csv', sep=';')
 print(dataframe.values.tolist())
@@ -36,11 +37,12 @@ timespans: list[OpeningTimespan] = [timespan1, timespan2]
 
 current_time: time = datetime.now().time()
 print(current_time.strftime("%H:%M:%S"))
-if timespan1.check_time(current_time) or timespan2.check_time(current_time):
+
+if True in [True for span in timespans if span.check_time(current_time)]:
     print("shop is open")
 else:
     print("shop is closed")
-
+    
 
 # stempo
 time_start: datetime = datetime(year=2020, month=9, day=7, hour=7, minute=55)
