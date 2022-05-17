@@ -58,17 +58,15 @@ print(mpgtol100km(31.4), "should be 7.49091.....")
 
 # prime numbers
 def isPrime(number: int) -> bool:
-    if number == 1 or number == 0:
+    if number <= 1:
         return None
 
-    prime = True
     for i in range (2, number):
         if number % i == 0:
-            prime = False
+            return None
+    return True 
 
-    return True if prime else None
-
-# print(*[number for number in range(1, 101) if isPrime(number)], end=" ")
+print(*[number for number in range(1, 101) if isPrime(number)], end=" ")
 
 
 # sentence palindrom
