@@ -1,10 +1,11 @@
 # geheimsprache
 from dataclasses import dataclass, field
+from random import randint
 
 def schwurbel_sentence(sentence: str) -> str:
     schwurbel = ''
     for original_word in sentence.lower().split(' '):
-        schwurbel += original_word[2:] + original_word[:2] + ' '
+        schwurbel += original_word[2:] + original_word[:-2] + ' '
     return schwurbel[:-1]
 
 sentence = 'Python ist eine tolle Programmiersprache'
@@ -18,7 +19,7 @@ class Beerkasten:
     content: list[list[int]] = field(init=False)
 
     def __post_init__(self):
-        self.content = [[1 for _ in range(self.columns)] for _ in range(self.rows)]
+        self.content = [[randint(0, 1) for _ in range(self.columns)] for _ in range(self.rows)]
     
     def __str__(self) -> str:
         representation = ''
@@ -43,6 +44,7 @@ class Beerkasten:
 
 
 bk = Beerkasten(4, 5)
+
 bk.get_beer(10,22)
 bk.get_beer(0,0)
 bk.get_beer(2,3)
